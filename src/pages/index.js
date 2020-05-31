@@ -1,5 +1,4 @@
-import React from "react"
+import React from 'react';
 
-export default function Home() {
-  return <div>Hello world!</div>
-}
+const Home = () => <div>hi pokeomn naster how are you</div>;
+export default Home;
