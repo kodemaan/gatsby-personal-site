@@ -1,7 +1,12 @@
 import React from 'react';
+import { Link } from 'gatsby';
 
-const Home = () => <div>
+const Home = () =>
+    <div style={{ margin: `3rem auto`, maxWidth: 600 }}>
   <h1>Personal site</h1>
-  <div>Change in tag Pokemon</div>
+  <p>What a world
+  <img src="https://source.unsplash.com/random/400x200" alt="" />
+  <Link to="/about/">About me</Link>
+  </p>
 </div>;
 export default Home;
