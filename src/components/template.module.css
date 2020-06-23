@@ -1,0 +1,13 @@
+.title {
+  margin: 3rem auto;
+  max-width: 600px;
+}
+
+.navigation {
+    display: flex;
+    justify-content: space-around;
+}
+
+.link {
+    background-color: blueviolet;
+}
