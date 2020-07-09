@@ -1,0 +1,21 @@
+.body {
+  max-width: 600px;
+  margin: 3em auto;
+}
+.title {
+  font-style: oblique;
+  text-align: center;
+  border-radius: 10px;
+  height: 8em;
+  background-color: peru;
+}
+
+.navigation {
+  display: flex;
+  text-align: center;
+  justify-content: space-evenly;
+}
+
+.link {
+  width: 5em;
+}
