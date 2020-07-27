@@ -5,12 +5,14 @@
  */
 
 module.exports = {
+  pathPrefix: '/gatsby-personal-site',
   siteMetadata: {
     title: 'My Homepage',
     description: 'This is my homepage'
   },
   /* Your site config here */
   plugins: [
+    'gatsby-plugin-sass',
     {
       resolve: 'gatsby-plugin-typography',
       options: {

@@ -1,27 +1,33 @@
-.body {
+$small: 400px;
+.body
   display: flex;
   flex-wrap: wrap;
   max-width: 1024px;
   margin: auto;
-}
-.title {
+
+.title
   font-style: oblique;
   width: 1024px;
   height: 5em;
-}
+  h2
+    height: 2em;
+  @media screen and (max-width: $small)
+    font-size: 1rem;
 
-.navigation {
+
+.navigation
   display: flex;
   width: 1024px;
+  height: 2em;
   align-content: space-between;
   border-bottom: 1px solid grey;
   padding-bottom: 1rem;
-}
 
-.link {
+
+.link
   width: 5em;
-}
 
-.content {
+
+.content
   padding-top: 1rem;
-}
+
