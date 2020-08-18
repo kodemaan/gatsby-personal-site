@@ -27,6 +27,7 @@
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "react-typography": "^0.16.19",
+    "tailwindcss": "^1.6.2",
     "typography": "^0.16.19",
     "typography-theme-doelger": "^0.16.19"
   },
@@ -40,8 +41,10 @@
     "eslint-plugin-react": "^7.20.0",
     "eslint-plugin-standard": "^4.0.1",
     "gatsby-plugin-eslint": "^2.0.8",
+    "gatsby-plugin-postcss": "^2.3.11",
     "gh-pages": "^3.1.0",
-    "prettier": "2.0.5"
+    "prettier": "2.0.5",
+    "tailwind": "^4.0.0"
   },
   "repository": {
     "type": "git",

@@ -12,6 +12,7 @@ module.exports = {
   },
   /* Your site config here */
   plugins: [
+    'gatsby-plugin-postcss',
     'gatsby-plugin-sass',
     {
       resolve: 'gatsby-plugin-typography',
@@ -23,7 +24,7 @@ module.exports = {
       resolve: 'gatsby-plugin-mdx',
       options: {
         defaultLayouts: {
-          default: require.resolve('./src/components/template')
+          default: require.resolve('./src/components/template.jsx')
         }
       }
     },
