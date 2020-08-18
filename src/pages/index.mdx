@@ -1,5 +1,31 @@
+---
+title: 'Home'
+description: 'This is the home page'
+---
+import Badge from '../components/badge.jsx';
+
 I am a senior web developer who has been working on various websites since 2010. I have worked with PHP, and Symfony sites but specialize in Node and React based websites.
 
-## Blog / Articles
-* [Dev.to articles](https://dev.to/kodemaan)
-* [Medium articles](https://medium.com/@kodemaan)
+<br />
+
+## Skills
+
+<div className='flex flex-wrap flex-col sm:flex-row'>
+  <Badge className='my-2 sm:my-0' icon='react' iconColor='#61DAFB' title='React' />
+  <Badge className='my-2 sm:my-0' icon='material-ui' iconColor='#0081CB' title="Material-UI" />
+  <Badge className='my-2 sm:my-0' icon='javascript' iconColor='#F7DF1E' title="JavaScript" />
+</div>
+
+<br />
+
+<h2>Blog / Articles</h2>
+<br />
+
+<div className='flex flex-wrap flex-col sm:flex-row'>
+  <a href="https://dev.to/kodemaan">
+    <Badge className='my-2 sm:my-0' icon='dev-dot-to' iconColor='#AAA' title='dev.to articles' />
+  </a>
+  <a href="https://medium.com/@kodemaan">
+    <Badge className='my-2 sm:my-0' icon='medium' iconColor='#AAA' title='Medium articles' />
+  </a>
+</div>

@@ -13,13 +13,6 @@ module.exports = {
   /* Your site config here */
   plugins: [
     'gatsby-plugin-postcss',
-    'gatsby-plugin-sass',
-    {
-      resolve: 'gatsby-plugin-typography',
-      options: {
-        pathToConfigModule: 'src/utils/typography'
-      }
-    },
     {
       resolve: 'gatsby-plugin-mdx',
       options: {
