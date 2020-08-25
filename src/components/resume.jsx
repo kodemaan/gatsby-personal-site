@@ -119,29 +119,28 @@ const Resume = (props) => {
       <div className="flex">{jsonResume.basics.summary}</div>
       <div className='flex mt-4 text-2xl'>Jobs</div>
       {jsonResume.work.map(job =>
-        <div key={JSON.stringify(job.company + job.startDate)}>
-          <>
-            <div className="flex items-center h-12">
-              <div className="text-2xl">{job.company}</div>
-              <div className="w-0 sm:w-16"></div>
-              <div className="text-xl">{job.startDate} - {job.endDate ? job.endDate : 'Present'}</div>
+        <div className='flex flex-wrap my-4' key={JSON.stringify(job.company + job.startDate)}>
+          <div className="flex items-center">
+            <div className="text-xl">{job.company}</div>
+            <div className="w-0 sm:w-20"></div>
+            <div className="text-xl">{job.startDate} - {job.endDate ? job.endDate : 'Present'}</div>
+          </div>
+          <div className="flex">
+            <div><a href={job.website}>{job.website}</a></div>
+            <div className="w-0 sm:w-8"></div>
+            <div>{job.summary}</div>
+          </div>
+          <div className="flex">
+            <div className="w-12"></div>
+            <div>
+              <ul className='list-disc'>
+                {job.highlights.map(highlight => <li key={JSON.stringify(job.company + highlight)}>{highlight}</li>)}
+              </ul>
             </div>
-            <div className="flex h-12">
-              <div><a href={job.website}>{job.website}</a></div>
-              <div className="w-0 sm:w-8"></div>
-              <div>{job.summary}</div>
-            </div>
-            <div className="flex h-12">
-              <div className="w-12"></div>
-              <div>
-                <ul className='list-disc'>
-                  {job.highlights.map(highlight => <li key={JSON.stringify(job.company + highlight)}>{highlight}</li>)}
-                </ul>
-              </div>
-            </div>
-          </>
+          </div>
         </div>
       )}
+      <div className='flex mt-4 text-2xl'>Education</div>
     </div>
   )
 }
