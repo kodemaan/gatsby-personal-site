@@ -150,15 +150,15 @@ const Resume = (props) => {
           </>
         )}
         <div className="w-full"></div>
-        <div>
-          <div className="mt-2">Skills</div>
+        <div className="w-full flex flex-wrap sm:w-auto">
+          <div className="mt-2 w-full">Skills</div>
           {jsonResume.skills.map(skill =>
-            <>
+            <div className="w-full sm:w-auto sm:mr-8" key={skill.name}>
               <div className="text-xl">{skill.name}</div>
               <ul className="list-disc text-base ml-6">
                 {skill.keywords.map(keyword => <li key={skill.name + keyword}>{keyword}</li>)}
               </ul>
-            </>
+            </div>
           )}
         </div>
         <div className="w-full sm:w-auto mr-8">
