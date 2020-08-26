@@ -112,35 +112,67 @@ const Resume = (props) => {
     <div>
       <h1>Resume</h1>
       <hr />
-      <div className='flex text-2xl mt-4'>
-        <div className='mr-2'>{jsonResume.basics.name}</div>
-        <div className='mx-2'>{jsonResume.basics.label}</div>
-      </div>
-      <div className="flex">{jsonResume.basics.summary}</div>
-      <div className='flex mt-4 text-2xl'>Jobs</div>
-      {jsonResume.work.map(job =>
-        <div className='flex flex-wrap my-4' key={JSON.stringify(job.company + job.startDate)}>
-          <div className="flex items-center">
-            <div className="text-xl">{job.company}</div>
-            <div className="w-0 sm:w-20"></div>
-            <div className="text-xl">{job.startDate} - {job.endDate ? job.endDate : 'Present'}</div>
-          </div>
-          <div className="flex">
-            <div><a href={job.website}>{job.website}</a></div>
-            <div className="w-0 sm:w-8"></div>
-            <div>{job.summary}</div>
-          </div>
-          <div className="flex">
-            <div className="w-12"></div>
+      <div className='flex flex-wrap text-2xl mt-4'>
+        <div className='w-full sm:w-auto'>{jsonResume.basics.name}</div>
+        <div className="w-0 sm:w-12"></div>
+        <div className='w-full sm:w-auto'>{jsonResume.basics.label}</div>
+        <div className='w-full text-base'>{jsonResume.basics.summary}</div>
+        <div className='w-full'>Jobs</div>
+        {jsonResume.work.map(job =>
+          <>
+            <div className="text-xl w-full sm:w-auto">{job.company}</div>
+            <div className="w-0 sm:w-12"></div>
+            <div className="text-xl w-full sm:w-auto">{job.startDate} - {job.endDate ? job.endDate : 'Present'}</div>
+            <div className='w-full text-base'><a href={job.website}>{job.website}</a></div>
+            <div className='text-base'>{job.summary}</div>
             <div>
-              <ul className='list-disc'>
-                {job.highlights.map(highlight => <li key={JSON.stringify(job.company + highlight)}>{highlight}</li>)}
+              <ul className='list-disc text-base ml-6'>
+                {job.highlights.map(highlight => <li key={job.company + highlight}>{highlight}</li>)}
               </ul>
             </div>
-          </div>
+          </>
+        )}
+        <div className="mt-2 w-full">Education</div>
+        {jsonResume.education.map(school =>
+          <>
+            <div className="w-full sm:w-auto sm:mr-8">
+              <div className='w-full text-xl'>{school.institution}</div>
+              <div className="w-full text-base">{school.studyType}'s Degree - GPA {school.gpa}</div>
+              <div className="w-full text-base">{school.area}</div>
+              <div className="w-full text-base">{school.startDate} - {school.endDate}</div>
+            </div>
+            <div className="w-full sm:w-auto">
+              <div className="w-full text-xl">Courses</div>
+              <ul className="list-disc text-base ml-6">
+                {school.courses.map(course => <li key={school.institution + course}>{course}</li>)}
+              </ul>
+            </div>
+          </>
+        )}
+        <div className="w-full"></div>
+        <div>
+          <div className="mt-2">Skills</div>
+          {jsonResume.skills.map(skill =>
+            <>
+              <div className="text-xl">{skill.name}</div>
+              <ul className="list-disc text-base ml-6">
+                {skill.keywords.map(keyword => <li key={skill.name + keyword}>{keyword}</li>)}
+              </ul>
+            </>
+          )}
         </div>
-      )}
-      <div className='flex mt-4 text-2xl'>Education</div>
+        <div className="w-full sm:w-auto mr-8">
+          <div className="mt-2 w-full">Interests</div>
+          {jsonResume.interests.map(interest =>
+            <>
+              <div className="w-full text-xl">{interest.name}</div>
+              <ul className="list-disc text-base ml-6">
+                {interest.keywords.map(keyword => <li key={interest.name + keyword}>{keyword}</li>)}
+              </ul>
+            </>
+          )}
+        </div>
+      </div>
     </div>
   )
 }
